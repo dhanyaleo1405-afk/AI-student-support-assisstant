@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Student Support Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🎓 AI Student Support Assistant</h1>
+            <p>Powered by Agentic AI + Ollama</p>
+        </header>
+
+        <div class="main">
+
+            <aside class="sidebar">
+                <h2>Student Profile</h2>
+
+                <label>Name</label>
+                <input type="text" id="studentName" placeholder="Enter your name">
+
+                <label>Course</label>
+                <input type="text" id="course" placeholder="B.E CSE - AI & ML">
+
+                <label>Year</label>
+                <select id="year">
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="Final Year" selected>Final Year</option>
+                </select>
+
+                <label>Career Goal</label>
+                <input type="text" id="goal" placeholder="Software Engineer">
+
+                <h3>Quick Actions</h3>
+
+                <button onclick="quickQuestion('Create a 7-day placement study plan')">
+                    📅 Placement Plan
+                </button>
+
+                <button onclick="quickQuestion('Give me 5 DSA interview questions')">
+                    💻 DSA Questions
+                </button>
+
+                <button onclick="quickQuestion('Suggest AI final year projects')">
+                    🤖 Project Ideas
+                </button>
+
+                <button onclick="quickQuestion('How can I prepare for aptitude?')">
+                    🧠 Aptitude
+                </button>
+            </aside>
+
+
+            <section class="chat-section">
+
+                <div id="chatBox" class="chat-box">
+
+                    <div class="message bot">
+                        <div class="message-content">
+                            <strong>AI Assistant</strong>
+                            <p>
+                                Hello! 👋 I am your AI Student Support Assistant.
+                                Ask me about DSA, placements, projects, academics,
+                                aptitude or career preparation.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="typing" id="typing">
+                    AI is thinking...
+                </div>
+
+                <div class="input-area">
+                    <input
+                        type="text"
+                        id="userInput"
+                        placeholder="Ask your question..."
+                        onkeypress="handleKeyPress(event)"
+                    >
+
+                    <button onclick="sendMessage()">
+                        Send 🚀
+                    </button>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
